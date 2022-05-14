@@ -1,0 +1,28 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+    name: frontend-deploy
+    labels:
+      name: frontend-deploy
+      env: aurtask
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      name: frontend-pod
+      env: aurtask
+  template:
+    metadata:
+      name: frontend-pod
+      labels:
+        name: frontend-pod
+        env: aurtask
+    spec:
+      containers:
+        - name: frontend
+          image: crazyfordevops/frontend
+          ports:
+            - containerPort: 80 
+          env:
+            - name: NAME
+              value: "Zain"
