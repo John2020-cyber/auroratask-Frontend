@@ -13,10 +13,10 @@ let month = ("0" + (date_ob.getMonth() + 1)).slice(-2);
 let year = date_ob.getFullYear();
 
 // current hours
-let hours = date_ob.getHours();
+let hours = ("0" + date_ob.getHours() ).slice(-2);
 
 // current minutes
-let minutes = date_ob.getMinutes();
+let minutes = ("0" + date_ob.getMinutes()).slice(-2);
 
 function makeGetRequest(path) {
 	axios.get(path).then(
@@ -33,5 +33,5 @@ function makeGetRequest(path) {
 		}
 	);
 }
-makeGetRequest('http://127.0.0.1:3000');
+makeGetRequest('http://backend:3000');
 app.listen(4000, () => console.log('Listening on port 4000..'));
