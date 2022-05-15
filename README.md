@@ -91,5 +91,6 @@ minikube service frontend --url
 ```
 You can input the `*YOUR MINIKUBE IP*:30081` in browser or you can `curl http:\\*YOUR MINIKUBE IP*:30081`
 
-
+## Helm Chat for Frontend
+It resides in the directory kubernetes/frontend-helmchart. It's not completed, I couldn't run it in my environment. It has some issues suggested that needs resolving. 
 ##                                                         ***THE FRONTEND END***
