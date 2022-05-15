@@ -1,6 +1,7 @@
 # FRONTEND Code Explaination
 ## Running code on local *nix machine
-Frontend API is written in Nodejs using Express framework. The code recieves "Hello Stakater" from `backend` on  default `localhost:8080` on default using `Axios`, if no environment variable `IP` and `PORT` is set. The code works on port `8081` be default and if given environment variable `PORT`, it will use that port number. It is uses localhost as ip address. `http://localhost:8081` displays the frontend output. 
+Frontend API is written in Nodejs using Express framework. The code recieves "Hello Stakater" from `backend` on  default `localhost:8080` on default using `Axios`, if no environment variable `IP` and `PORT` is set. The code works on port `8081` be default and if given environment variable `PORT`, it will use that port number. It is uses localhost as ip address. `http://localhost:8081` displays the frontend output. The ouput of frontend will on default settings will:
+`16/05/2022 Hello Stakater`
 ## NOTE for FRONTEND
 **The *NOEDJS* code of `frontend` uses `GMT+5` works fine in the `Docker Conatiners`. But on your local machine it will show you time `+5`. The date will also be `+1` on your local machine but will work fine on `Docker Containters`** Since the local machine should be set to local time. 
 
