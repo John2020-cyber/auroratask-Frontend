@@ -1,5 +1,6 @@
 # FRONTEND Code Explaination
 ## Running code on local *nix machine
+Ideally `pm2` should be used for `nodejs` deployments but I am using `node` for running `nodejs` as it is test environment.
 Frontend API is written in `Nodejs` using `Express` framework. The code recieves "Hello Stakater" from `backend` on  default `localhost:8080` using `Axios`, if no environment variable `IP` and `PORT` is set. The code works on port `8081` default and if given environment variable `PORT`, it will use that port number. It is uses localhost as ip address. `http://localhost:8081` displays the frontend output. The ouput of frontend will on default settings will:
 `16/05/2022 00:06 Hello Stakater` `D/M/Y HH:MM Hello *Yourname*`
 ## NOTE for FRONTEND
