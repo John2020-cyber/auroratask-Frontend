@@ -8,9 +8,9 @@ metadata:
 spec:
   type: NodePort
   ports:
-    - port: 80
-      targetPort: 80
-      nodePort: 30080
+    - port: 8081
+      targetPort: 8081
+      nodePort: 30081
   selector:
     name: frontend-pod
     env: aurtask

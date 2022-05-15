@@ -8,6 +8,9 @@ metadata:
 spec:
    containers:
     - name: frontend
-      image: crazyfordevops/frontend
+      image: crazyfordevops/frontend:vFinal
       ports:
-        - containerPort: 80
+        - containerPort: 8081
+      env:
+        - name: IP
+          value: "backend"
