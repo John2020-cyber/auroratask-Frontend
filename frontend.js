@@ -2,7 +2,9 @@
 const express = require('express');
 const app = express();
 const axios = require('axios');
-const port = process.env.PORT || 80;
+const port = process.env.PORT || 8080;
+const port1 = process.env.PORT1 || 8081;
+const ip = process.env.IP || "localhost";
 
 
 
@@ -43,6 +45,6 @@ function makeGetRequest(path) {
 	);
 }
 //use environment PORT when you are using Docker containter as frontend and backend will be running on same host, change port to of frontend or backend to get stable results
-makeGetRequest(`http://backend:${port}`);
-
-app.listen(port, () => console.log(`Listening on port ${port}..`));
+//makeGetRequest(`http://${ip}:${port}`);
+makeGetRequest(`http://${ip}:${port}`);
+app.listen(port1, () => console.log(`Listening on port ${port1}..`));
