@@ -9,7 +9,7 @@ Frontend API is written in `Nodejs` using `Express` framework. The code recieves
 ### How to run it.
 Make sure you are running it on a Linux machine. Make sure you have installed `node 16 or above` and `npm` on your linux machine. I'll be working on Ubuntu, my commands will work on it. `git clone` the frontend into your machine.
 ```
-cd auroratask-frontend
+cd auroratask-Frontend
 npm init --yes
 npm i express
 npm i axios
