@@ -1,0 +1,28 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+    name: {{ .Release.Name }}-deploy
+    labels:
+      name: frontend-deploy
+      env: aurtask
+spec:
+  replicas: {{ .Values.replicaCount }}
+  selector:
+    matchLabels:
+      name: frontend-pod
+      env: aurtask
+  template:
+    metadata:
+      name: frontend-pod
+      labels:
+        name: frontend-pod
+        env: aurtask
+    spec:
+      containers:
+        - name: frontend
+          image: {{ .Values.image.repository }}:{{ .Values.image.tag }}
+          ports:
+            - containerPort: 8081 
+          env:
+            - name: IP
+              value: "backend"

@@ -1,0 +1,12 @@
+# Default values for frontend-helmchart.
+# This is a YAML-formatted file.
+# Declare variables to be passed into your templates.
+
+replicaCouunt: 1
+image:
+    repository: crazyfordevops/frontend
+    tag: "vFinal"
+
+service:
+  type: ClusterIP
+  port: 80
