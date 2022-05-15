@@ -1,6 +1,8 @@
 # FRONTEND Code Explaination
 ## Running code on local *nix machine
-Frontend API is written in Nodejs using Express framework. The code sends "Hello Stakater" by default if no environment variable `NAME` is set. The code works on port `8081` be default and if given environment variable `PORT`, it will use that port number. It is uses localhost as ip address. `http://localhost:8081` displays the frontend output
+Frontend API is written in Nodejs using Express framework. The code sends "Hello Stakater" by default if no environment variable `NAME` is set. The code works on port `8081` be default and if given environment variable `PORT`, it will use that port number. It is uses localhost as ip address. `http://localhost:8081` displays the frontend output. 
+## NOTE for FRONTEND
+**The *NOEDJS* code of `frontend` uses GMT+5 works fine in the conatiners. But on your local machine it will show you time +5** Since the local machine should be set to local time. 
 
 ### How to run it.
 Make sure you are running it on a Linux machine. Make sure you have installed `node 16 or above` and `npm` on your linux machine. I'll be working on Ubuntu, my commands will work on it. `git clone` the frontend into your machine.
@@ -26,7 +28,8 @@ PORT=*PORT NUMBER* node frontend.js
 ```
 You will get following output and you can access your api with browser `localhost:8081` or `curl http://localhost:8081`
 ```
-Listening on port 8080..
+Listening on port 8081..
+Hello Stakater
 ```
 
 ## Running on Docker image
@@ -45,7 +48,7 @@ sudo docker run -d -e IP=backend -p 8081:8081 --name frontend --link backend:bac
 ```
 If publishes its result also on localhost. You can access the container now by running entering `localhost:8081` in browser or `curl http://localhost:8081` on your terminal. If no `NAME` variable is given. The response of frontend will be:
 ```
-Hello Stakater
+16/05/2022 00:06 Hello Stakater
 ```
 ## Running on Kubernetes with MINIKUBE
 Make sure your have installed `kubectl` to use kubernetes with `MINIKUBE`. Make sure you have configured and `MINIKUBE` is running in your virtual enviroment. You can use the following link to install `kubectl` `https://kubernetes.io/docs/tasks/tools/install-kubectl-linux/` and to install `MINIKUBE` `https://minikube.sigs.k8s.io/docs/start/`.
