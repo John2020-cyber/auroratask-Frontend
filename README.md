@@ -20,6 +20,11 @@ node frontend.js
  OR
 nodemon frontend.js
 ```
+You will get following output and you can access your api with browser `localhost:8081` or `curl http://localhost:8081`
+```
+Listening on port 8081..
+Hello Stakater
+```
 **OPTIONAL**
 If you want to pass your 'IP' in environment variable
 ```
@@ -29,11 +34,7 @@ If you want to pass your 'PORT' in environment variable
 ```
 PORT=*PORT NUMBER* node frontend.js
 ```
-You will get following output and you can access your api with browser `localhost:8081` or `curl http://localhost:8081`
-```
-Listening on port 8081..
-Hello Stakater
-```
+
 
 ## Running on Docker image
 The Dockerfile is built using light image `node:slim` and install dependies to run our project with nodejs and express. Add the tag `frontend` while building the image to make our reference from `frontend` easier.
