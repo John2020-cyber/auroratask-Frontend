@@ -2,7 +2,7 @@
 ## Running code on local *nix machine
 Frontend API is written in Nodejs using Express framework. The code sends "Hello Stakater" by default if no environment variable `NAME` is set. The code works on port `8081` be default and if given environment variable `PORT`, it will use that port number. It is uses localhost as ip address. `http://localhost:8081` displays the frontend output. 
 ## NOTE for FRONTEND
-**The *NOEDJS* code of `frontend` uses GMT+5 works fine in the conatiners. But on your local machine it will show you time +5** Since the local machine should be set to local time. 
+**The *NOEDJS* code of `frontend` uses `GMT+5` works fine in the `Docker Conatiners`. But on your local machine it will show you time `+5`. The date will also be `+1` on your local machine but will work fine on `Docker Containters`** Since the local machine should be set to local time. 
 
 ### How to run it.
 Make sure you are running it on a Linux machine. Make sure you have installed `node 16 or above` and `npm` on your linux machine. I'll be working on Ubuntu, my commands will work on it. `git clone` the frontend into your machine.
